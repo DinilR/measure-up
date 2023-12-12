@@ -1,0 +1,8 @@
+@media (max-width: 600px) {
+    .logo_front {
+      display: flex;
+    }
+    .logo_middle {
+        display: none;
+    }
+  }
