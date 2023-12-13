@@ -47,7 +47,7 @@ const IntroSection = () => {
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco.
               </Typography>
-              <Typography variant="body1" sx={{textAlign: 'left'}} gutterBottom>
+              <Typography variant="body1" gutterBottom>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco.
