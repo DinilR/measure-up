@@ -10,7 +10,7 @@ function App() {
       <Appbar />
       <IntroSection />
       <TeamSection/>
-      <h1>Hi this is measure up</h1>
+      {/* <h1>Hi this is measure up</h1> */}
     </>
   );
 }

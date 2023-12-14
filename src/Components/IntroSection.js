@@ -9,6 +9,8 @@ const IntroSection = () => {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: 'center',
+      height:"95vh",
+      marginTop:"-0%"
     },
   }));
 

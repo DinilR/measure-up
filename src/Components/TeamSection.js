@@ -10,7 +10,45 @@ const TeamSection = () => {
       height: "40vh",
     },
   }));
-  const ContentBox = styled(Box)(({ theme }) => ({}));
+  const PicBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "8%",
+      marginTop:"0%"
+    },
+  }));
+  const TextBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: "10%",
+    },
+    [theme.breakpoints.down("md")]: {
+      marginLeft:"5%",
+      marginTop:"10%"
+    },
+  }));
+  const SecondContentBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "10%",
+
+    },
+    [theme.breakpoints.down("md")]: {
+      marginTop: "80%",
+      
+    },
+  }));
+
+
+  const ContentBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+
+    }
+  }));
+  const SecondAvatar = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      marginTop:"-20%"
+
+    }
+  }));
   return (
     <>
       <Box>
@@ -42,9 +80,10 @@ const TeamSection = () => {
         <ContentBox
           sx={{ display: "flex", flexDirection: "row", mt: "10%", mb: "10%" }}
         >
-          <Box>
-            <Grid container spacing={18} sx={{ ml: "-20%", mr: "10%", textAlign:"center" }}>
-              <Grid item xs={12} md={6} sx={{ mt: "5%" }}>
+          <PicBox sx={{ml:""}}>
+            <Grid container spacing={ 16} sx={{ ml: "-20%", mr: "10%", textAlign:"center" }}>
+              <Grid item xs={12} md={6} sx={{ mt: "0%" }}>
+                <Box>
                 <Box
                   sx={{
                     height: "200px",
@@ -65,7 +104,7 @@ const TeamSection = () => {
                     position: "relative",
                   }}
                 ></Box>
-                <Box sx={{mt:"30%"}}>
+                <Box sx={{mt:"20%",ml:"-40%"}}>
                   <Typography
                     variant="subtitle"
                     display="block"
@@ -83,8 +122,10 @@ const TeamSection = () => {
                     ARI
                   </Typography>
                 </Box>
+                </Box>
               </Grid>
-              <Grid item xs={12} md={6} sx={{ mt: "5%" }}>
+              <Grid item xs={12} md={6} sx={{ mt: "0%" }}>
+                <SecondAvatar>
                 <Box
                   sx={{
                     height: "200px",
@@ -105,7 +146,7 @@ const TeamSection = () => {
                     position: "relative",
                   }}
                 ></Box>
-                <Box sx={{mt:"30%"}}>
+                <Box sx={{mt:"20%",ml:"-40%"}}>
                   <Typography
                     variant="subtitle"
                     display="block"
@@ -123,10 +164,11 @@ const TeamSection = () => {
                     MUKUND
                   </Typography>
                 </Box>
+                </SecondAvatar>
               </Grid>
             </Grid>
-          </Box>
-          <Box sx={{ ml: "30%" }}>
+          </PicBox>
+          <TextBox sx={{ ml: "20%" }}>
             <Box sx={{ mb: "3%" }}>
               <Typography
                 variant="subtitle"
@@ -149,7 +191,7 @@ const TeamSection = () => {
               </Typography>
             </Box>
 
-            <Box>
+            <SecondContentBox>
               <Typography
                 variant="subtitle"
                 display="block"
@@ -168,8 +210,8 @@ const TeamSection = () => {
                 Robotics @Carnegie Mellon. Chat with me about alpine climbing,
                 solo backpacking, and rock music 🎸
               </Typography>
-            </Box>
-          </Box>
+            </SecondContentBox>
+          </TextBox>
         </ContentBox>
       </Box>
     </>
