@@ -21,9 +21,10 @@ const IntroSection = () => {
           flexDirection: "row",
           color: "white",
           justifyContent: "space-evenly",
+          height:"100vh"
         }}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} sx={{mt:"5%"}}>
           {/* Content Section */}
           <Grid item xs={12} md={6} sx={{mt:"5%"}}>
             <Box
@@ -35,7 +36,7 @@ const IntroSection = () => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 ml:"2%",
-                mr:"2%"
+                mr:"2%",
               }}
             >
               <Typography variant="h3" sx={{textAlign: 'center'}} gutterBottom>
@@ -57,7 +58,7 @@ const IntroSection = () => {
           </Grid>
 
           {/* Picture Section */}
-          <Grid item xs={12} md={6} sx={{mt:"4%"}}>
+          <Grid item xs={12} md={6} sx={{mt:"4%",mb:"8%"}}>
             <Box
               className="picture_section"
               sx={{

@@ -147,7 +147,7 @@ function Appbar() {
               <Button 
                 key={page}
                 onClick={handleCloseNavMenu}
-                variant="contained"
+                variant="outlined"
                 color="success"
                 sx={{ my: 2, color: "white", display: "block", justifyContent:"flex-end", margin: '0 16px' }}
               >
