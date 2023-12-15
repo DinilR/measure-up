@@ -1,12 +1,26 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography, styled } from "@mui/material";
 import React from "react";
-import background from "./../Resources/background_support.png";
+import background from "./../Resources/background_support_2.png";
 
 const SupportSection = () => {
+  const PictureSection = styled(Box)(({ theme }) => ({
+    
+    [theme.breakpoints.down("md")]: {
+      display:"none"
+    },
+  }));
+
+  const ContentSection = styled(Box)(({ theme }) => ({
+    
+    [theme.breakpoints.down("md")]: {
+        marginLeft:"30%",
+        marginBottom:"10%"
+    },
+  }));
   return (
     <>
       <Box sx={{ display: "flex", flexDirection: "row", background:"#E6FAE6" }}>
-        <Box sx={{ width: "50%", ml: "3%",mt:"10%" }}>
+        <ContentSection sx={{ width: "50%", ml: "3%",mt:"10%" }}>
           <Typography variant="h5" sx={{ fontWeight: 800 }} gutterBottom>
             Intrested in trying Measure Up?
           </Typography>
@@ -28,7 +42,7 @@ const SupportSection = () => {
                 id="filled-required"
                 size="small"
                 color="success"
-                sx={{ width: "85%", mt: "0px" }}
+                sx={{ width: "95%", mt: "0px" }}
               />
             </Box>
             <Box sx={{ mt: "2%" }}>
@@ -45,15 +59,15 @@ const SupportSection = () => {
                 id="filled-required"
                 size="small"
                 color="success"
-                sx={{ width: "85%", mt: "0px" }}
+                sx={{ width: "95%", mt: "0px" }}
               />
             </Box>
             <Box sx={{mt:"5%"}}>
               <Button variant="contained" color="success">Submit</Button>
             </Box>
           </Box>
-        </Box>
-        <Box sx={{ml:"10%"}}>
+        </ContentSection>
+        <PictureSection sx={{ml:"10%"}}>
           <Box
             sx={{
               background: `url('${background}') lightgray 50% / cover no-repeat`,
@@ -61,7 +75,7 @@ const SupportSection = () => {
               width: "650px",
             }}
           ></Box>
-        </Box>
+        </PictureSection>
       </Box>
     </>
   );
