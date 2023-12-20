@@ -17,6 +17,7 @@ const IntroSection = () => {
   return (
     <>
       <ResponsiveBox
+        id = "intro"
         sx={{
           bgcolor: "#000000",
           display: "flex",

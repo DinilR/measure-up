@@ -12,6 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import logo from "./../Resources/MLogo.png";
 import "./styles.css";
+import { Link } from "react-scroll";
 
 const pages = ["Contact Us", "Team", "Support"];
 // const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -31,13 +32,18 @@ function Appbar() {
     setAnchorElNav(null);
   };
 
-
   //   const handleCloseUserMenu = () => {
   //     setAnchorElUser(null);
   //   };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#000000" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#000000" }} id="appbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -67,7 +73,7 @@ function Appbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              ml:"10px"
+              ml: "10px",
             }}
           >
             MEASUREUP
@@ -102,11 +108,20 @@ function Appbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
+              <MenuItem>
+                <Typography textAlign="center">Contact Us</Typography>
+              </MenuItem>
+              <MenuItem>
+                <Typography textAlign="center">Team</Typography>
+              </MenuItem>
+              <MenuItem>
+                <Typography textAlign="center">Support</Typography>
+              </MenuItem>
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
@@ -137,13 +152,61 @@ function Appbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              ml:"10px"
+              ml: "10px",
             }}
           >
             MEASUREUP
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, justifyContent:"flex-end" }}>
-            {pages.map((page) => (
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
+            }}
+          >
+            {/* <Button
+              variant="outlined"
+              color="success"
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                justifyContent: "flex-end",
+                margin: "0 16px",
+              }}
+              onClick={() => scrollToSection("support")}
+            >
+              Contact Us
+            </Button> */}
+            <Button
+              variant="outlined"
+              color="success"
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                justifyContent: "flex-end",
+                margin: "0 16px",
+              }}
+              onClick={() => scrollToSection("team")}
+            >
+              Team
+            </Button>
+            <Button
+              variant="outlined"
+              color="success"
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                justifyContent: "flex-end",
+                margin: "0 16px",
+              }}
+              onClick={() => scrollToSection("support")}
+            >
+              Support
+            </Button>
+            {/* {pages.map((page) => (
               <Button 
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -153,7 +216,7 @@ function Appbar() {
               >
                 {page}
               </Button>
-            ))}
+            ))} */}
           </Box>
         </Toolbar>
       </Container>

@@ -61,6 +61,7 @@ const TeamSection = () => {
             alignItems: "center",
             flexDirection: "column",
           }}
+          id="team"
         >
           <Typography
             variant="h3"

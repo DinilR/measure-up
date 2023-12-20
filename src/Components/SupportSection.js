@@ -19,7 +19,7 @@ const SupportSection = () => {
   }));
   return (
     <>
-      <Box sx={{ display: "flex", flexDirection: "row", background:"#E6FAE6" }}>
+      <Box sx={{ display: "flex", flexDirection: "row", background:"#E6FAE6" }} id="support">
         <ContentSection sx={{ width: "50%", ml: "3%",mt:"10%" }}>
           <Typography variant="h5" sx={{ fontWeight: 800 }} gutterBottom>
             Intrested in trying Measure Up?

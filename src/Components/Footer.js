@@ -7,6 +7,13 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Footer = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if(section) {
+      section.scrollIntoView({behavior: "smooth"})
+    }
+  };
+
   return (
     <>
       <Box
@@ -34,7 +41,6 @@ const Footer = () => {
               variant="body1"
               noWrap
               component="a"
-              href="#app-bar-with-responsive-menu"
               sx={{
                 mt: "4%",
                 fontFamily: "monospace",
@@ -43,7 +49,9 @@ const Footer = () => {
                 color: "inherit",
                 textDecoration: "none",
                 ml: "0%",
+                cursor:"pointer"
               }}
+              onClick={() => scrollToSection("appbar")}
             >
               MEASUREUP
             </Typography>
@@ -58,19 +66,21 @@ const Footer = () => {
             mt: "1%",
           }}
         >
-          <Typography
+          {/* <Typography
             sx={{
               "&:hover": {
                 textDecoration: "underline",
               },
               transition: "text-decoration 0.3s ease",
               mr: "30%",
-              whiteSpace: "nowrap", // Add a transition for a smoother effect
+              whiteSpace: "nowrap", 
+              cursor: "pointer"// Add a transition for a smoother effect
             }}
             variant="caption"
+
           >
             Contact Us
-          </Typography>
+          </Typography> */}
           <Typography
             sx={{
               "&:hover": {
@@ -78,8 +88,10 @@ const Footer = () => {
               },
               transition: "text-decoration 0.3s ease", // Add a transition for a smoother effect
               mr: "30%",
+              cursor: "pointer"
             }}
             variant="caption"
+            onClick={() => scrollToSection("team")}
           >
             Team
           </Typography>
@@ -88,9 +100,11 @@ const Footer = () => {
               "&:hover": {
                 textDecoration: "underline",
               },
-              transition: "text-decoration 0.3s ease", // Add a transition for a smoother effect
+              transition: "text-decoration 0.3s ease",
+              cursor: "pointer" // Add a transition for a smoother effect
             }}
             variant="caption"
+            onClick={()=> scrollToSection("support")}
           >
             Support
           </Typography>
