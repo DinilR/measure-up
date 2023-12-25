@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg";
+import "./App.css";
+import Appbar from "./Components/Appbar";
+import Footer from "./Components/Footer";
+import IntroSection from "./Components/IntroSection";
+import SupportSection from "./Components/SupportSection";
+import TeamSection from "./Components/TeamSection";
 
 function App() {
+  // const scrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Appbar />
+      <IntroSection />
+
+      <TeamSection />
+
+      <SupportSection />
+
+      <Footer />
+      {/* <h1>Hi this is measure up</h1> */}
+    </>
   );
 }
 
