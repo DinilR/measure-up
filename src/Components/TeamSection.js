@@ -12,8 +12,9 @@ const TeamSection = () => {
   }));
   const PicBox = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "8%",
-      marginTop:"0%"
+      marginLeft: "2%",
+      marginTop:"2%",
+      width:"70%"
     },
   }));
   const TextBox = styled(Box)(({ theme }) => ({
@@ -27,13 +28,21 @@ const TeamSection = () => {
   }));
   const SecondContentBox = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("sm")]: {
-      marginTop: "10%",
+      marginTop: "-100px",
 
     },
     [theme.breakpoints.down("md")]: {
       marginTop: "80%",
       
     },
+  }));
+
+  const FirstContentBox = styled(Box)(({ theme }) => ({
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "-70%",
+
+    },
+    
   }));
 
 
@@ -49,6 +58,7 @@ const TeamSection = () => {
 
     }
   }));
+ 
   return (
     <>
       <Box>
@@ -84,7 +94,7 @@ const TeamSection = () => {
           <PicBox sx={{ml:""}}>
             <Grid container spacing={ 16} sx={{ ml: "-20%", mr: "10%", textAlign:"center" }}>
               <Grid item xs={12} md={6} sx={{ mt: "0%" }}>
-                <Box>
+                <Box >
                 <Box
                   sx={{
                     height: "200px",
@@ -93,6 +103,7 @@ const TeamSection = () => {
                     zIndex: "1",
                     mb: "-220px",
                     ml: "20px",
+                    paddingRight:"0%",
                     position: "relative",
                   }}
                 ></Box>
@@ -170,7 +181,7 @@ const TeamSection = () => {
             </Grid>
           </PicBox>
           <TextBox sx={{ ml: "20%" }}>
-            <Box sx={{ mb: "3%" }}>
+            <FirstContentBox sx={{ mb: "3%" }}>
               <Typography
                 variant="subtitle"
                 display="block"
@@ -190,9 +201,9 @@ const TeamSection = () => {
                 Manchester United, the intersection of technology and
                 government, and Ben Taub.
               </Typography>
-            </Box>
+            </FirstContentBox>
 
-            <SecondContentBox>
+            <SecondContentBox >
               <Typography
                 variant="subtitle"
                 display="block"

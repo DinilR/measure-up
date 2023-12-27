@@ -126,7 +126,9 @@ const SupportSection = () => {
             Interested in trying Measure Up?
           </Typography>
           <Typography variant="body1" sx={{ fontWeight: 300 }} gutterBottom>
-            We are excited for you to join our platform.
+            If you'd like to show support for MeasureUP, please share your
+            details, and our support team will be in touch. Thank you for
+            considering us!
           </Typography>
           <Box className="form_section">
             <form onSubmit={sendEmail} ref={form}>

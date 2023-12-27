@@ -9,8 +9,12 @@ const IntroSection = () => {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: 'center',
-      height:"95vh",
-      marginTop:"-0%"
+      height:"60vh",
+    },
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: 'center',
+      height:"90vh",
     },
   }));
 
@@ -43,7 +47,7 @@ const IntroSection = () => {
               }}
             >
               <Typography variant="h3" sx={{textAlign: 'center'}} gutterBottom>
-                Measure up
+                MeasureUP
               </Typography>
               <Box  sx={{textAlign: 'left', ml:"5%"}}>
               <Typography variant="body1" gutterBottom>

@@ -47,7 +47,7 @@ function Appbar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <img
               src={logo}
               alt="Logo"
@@ -58,25 +58,25 @@ function Appbar() {
                 marginRight: "10px",
               }}
             />
-          </Box>
+          </Box> */}
 
           <Typography
-            variant="h6"
+            variant="h4"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "HelveticaWorld",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
               ml: "10px",
             }}
           >
-            MEASUREUP
+            MeasureUP
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -125,7 +125,7 @@ function Appbar() {
             </Menu>
           </Box>
           {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <img
               src={logo}
               alt="Logo"
@@ -136,10 +136,10 @@ function Appbar() {
                 marginRight: "10px",
               }}
             />
-          </Box>
+          </Box> */}
 
           <Typography
-            variant="h5"
+            variant="h4"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
@@ -147,15 +147,15 @@ function Appbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "HelveticaWorld",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".1rem",
               color: "inherit",
               textDecoration: "none",
               ml: "10px",
             }}
           >
-            MEASUREUP
+            MeasureUP
           </Typography>
           <Box
             sx={{
