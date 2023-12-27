@@ -68,9 +68,9 @@ function Appbar() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "HelveticaWorld",
+              fontFamily: "Helvetica",
               fontWeight: 700,
-              letterSpacing: ".1rem",
+              letterSpacing: "-0.1rem",
               color: "inherit",
               textDecoration: "none",
               ml: "10px",
@@ -108,13 +108,10 @@ function Appbar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem>
-                <Typography textAlign="center">Contact Us</Typography>
-              </MenuItem>
-              <MenuItem>
+              <MenuItem onClick={() => scrollToSection("team")}>
                 <Typography textAlign="center">Team</Typography>
               </MenuItem>
-              <MenuItem>
+              <MenuItem onClick={() => scrollToSection("support")}>
                 <Typography textAlign="center">Support</Typography>
               </MenuItem>
               {/* {pages.map((page) => (
@@ -147,7 +144,7 @@ function Appbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "HelveticaWorld",
+              fontFamily: "Helvetica",
               fontWeight: 700,
               letterSpacing: ".1rem",
               color: "inherit",

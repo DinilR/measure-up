@@ -9,12 +9,18 @@ const IntroSection = () => {
     [theme.breakpoints.down("md")]: {
       flexDirection: "column",
       alignItems: 'center',
-      height:"60vh",
+      height:"100%",
     },
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
       alignItems: 'center',
-      height:"90vh",
+      paddingTop:"5%",
+      height:"100%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      alignItems: 'center',
+      height: "100%",
     },
   }));
 

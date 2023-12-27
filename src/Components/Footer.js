@@ -27,25 +27,15 @@ const Footer = () => {
       >
         <Box>
           <Box sx={{ display: "flex", mt: "5%" }}>
-            <img
-              src={logo}
-              alt="Logo"
-              className="logo_front"
-              style={{
-                width: "40px",
-                height: "40px",
-                marginRight: "10px",
-              }}
-            />
             <Typography
-              variant="body1"
+              variant="h6"
               noWrap
               component="a"
               sx={{
                 mt: "4%",
-                fontFamily: "monospace",
-                fontWeight: 600,
-                letterSpacing: ".3rem",
+                fontFamily: "Helvetica",
+                fontWeight: 700,
+                letterSpacing: ".1rem",
                 color: "inherit",
                 textDecoration: "none",
                 ml: "0%",
@@ -53,7 +43,7 @@ const Footer = () => {
               }}
               onClick={() => scrollToSection("appbar")}
             >
-              MEASUREUP
+              MeasureUP
             </Typography>
           </Box>
         </Box>
@@ -152,7 +142,7 @@ const Footer = () => {
         </Box>
         <Box sx={{ mt: "1%", mb: "3%" }}>
           <Typography variant="body2">
-            © 2023 Measure Up. All rights reserved.
+            © 2023 MeasureUP. All rights reserved.
           </Typography>
         </Box>
       </Box>

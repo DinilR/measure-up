@@ -25,8 +25,9 @@ const SupportSection = () => {
 
   const ContentSection = styled(Box)(({ theme }) => ({
     [theme.breakpoints.down("md")]: {
-      marginLeft: "30%",
+      marginLeft: "20%",
       marginBottom: "10%",
+      width:"70%"
     },
   }));
 
@@ -121,7 +122,7 @@ const SupportSection = () => {
             </Alert>
           </Collapse>
         </Box>
-        <ContentSection sx={{ width: "50%", ml: "3%", mt: "10%" }}>
+        <ContentSection sx={{ width: "60%", ml: "3%", mt: "10%" }}>
           <Typography variant="h5" sx={{ fontWeight: 800 }} gutterBottom>
             Interested in trying Measure Up?
           </Typography>
